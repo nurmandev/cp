@@ -1,6 +1,5 @@
 "use client";
 
-import { ArrowDown } from "lucide-react";
 import bitcoinImage from "@/assets/images/btc-image.png";
 import litecoinImage from "@/assets/images/litecoin-3d.png";
 import skullImage from "@/assets/images/litecoin-3d.png";
