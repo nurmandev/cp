@@ -21,42 +21,39 @@ const games = [
 
 export default function ProductShowcase() {
   return (
-    <div className="flex flex-col justify-center min-h-screen text-white px-4 md:px-20 py-10">
-      {/* Heading */}
-      <div className="available-game text-center md:text-left mb-6">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">Available Games</h1>
-        <Image
-          src="/btc-coin.png"
-          alt={`Image of`}
-          layout="responsive"
-          width={10}
-          height={10}
-          className="object-cover w-[30px] h-[8]"
-        />
-        <p className="text-gray-400">
+    <div className="flex flex-col items-center justify-center min-h-screen text-white px-4 md:px-20 py-10 bg-black">
+      {/* Heading Section */}
+      <div className="text-center mb-10">
+        <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
+          AVAILABLE GAMES
+        </h1>
+        <div className="flex items-center justify-center">
+          <span className="inline-block w-3 h-3 bg-orange-500 rounded-full mr-2"></span>
+        </div>
+        <p className="text-gray-400 mt-2">
           Available MODS and cheats for the following games
         </p>
       </div>
 
-      {/* Game Cards Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {/* Game Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-screen-lg">
         {games.map((game) => (
           <div
             key={game.title}
-            className="relative bg-gray-800 rounded-lg shadow-lg overflow-hidden group"
+            className="relative bg-gray-800 rounded-lg overflow-hidden shadow-md group"
           >
-            {/* Image */}
+            {/* Game Image */}
             <Image
               src={game.image}
               alt={`Image of ${game.title}`}
               layout="responsive"
               width={300}
               height={200}
-              className="object-cover w-full h-48"
+              className="object-cover w-full h-full"
             />
-            {/* Overlay */}
-            <div className="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-              <h2 className="text-2xl font-bold">{game.title}</h2>
+            {/* Title Overlay */}
+            <div className="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <h2 className="text-2xl font-bold text-white">{game.title}</h2>
             </div>
           </div>
         ))}

@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 
 export default function Footer() {
