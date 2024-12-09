@@ -7,7 +7,7 @@
   src: url("/src/assets/font/AmericanCaptain.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
-  color: #e46a31e3
+  color: #e46a31e3;
 }
 
 @layer components {

@@ -8,6 +8,7 @@ import robotImage from "@/assets/images/hone_bg.png";
 import backgroundImage from "/public/bg.png";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { FaArrowCircleDown } from "react-icons/fa";
 
 export default function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -22,80 +23,55 @@ export default function Hero() {
   return (
     <section
       ref={sectionRef}
-      className="relative pt-10 pb-16 bg-gradient-to-b from-[#e46a31e3] to-black text-white overflow-x-hidden"
+      className="relative flex flex-col justify-between bg-black text-white text-center p-8 min-h-screen overflow-hidden"
     >
-      {/* Background Effect */}
-      <div
-        className="absolute top-0 left-0 w-full h-full bg-cover bg-no-repeat bg-center opacity-30 z-0"
-        style={{
-          backgroundImage: `url(${backgroundImage})`,
-        }}
-      />
+      {/* Background Image */}
+      <motion.div
+        className="absolute top-0 left-0 w-full h-full"
+        style={{ translateY }}
+      >
+        <img
+          src={backgroundImage.src}
+          alt="Background"
+          className="w-full h-full object-cover"
+        />
+      </motion.div>
 
-      <div className="container mx-auto px-4 text-center relative z-10">
-        {/* Title */}
-        <h1 className="tracking-tighter uppercase flex items-center justify-center font-american text-[48px] sm:text-[64px] md:text-[100px] lg:text-[140px] font-normal text-center leading-tight">
-          GET PAID TO CHEAT
+      {/* Animated Assets */}
+      <div className="absolute bottom-24 left-1/2 transform -translate-x-1/2 w-[50%] md:w-[33%]">
+        <img src={robotImage.src} alt="Robot Mascot" className="w-full" />
+      </div>
+      <div className="absolute top-1/3 left-3/4 w-20 md:w-40">
+        <img src={bitcoinImage.src} alt="Bitcoin" className="w-full" />
+      </div>
+      <div className="absolute top-3/4 right-1/4 w-16 md:w-32">
+        <img src={litecoinImage.src} alt="Litecoin" className="w-full" />
+      </div>
+      <div className="absolute top-1/3 left-[10%] w-16 md:w-32">
+        <img src={litecoinImage.src} alt="Litecoin" className="w-full" />
+      </div>
+      <div className="absolute top-[60%] left-[5%] w-20 md:w-40 -rotate-12">
+        <img src={bitcoinImage.src} alt="Bitcoin" className="w-full" />
+      </div>
+      <div className="absolute bottom-0 right-8 w-4 md:w-6">
+        <img src={skullImage.src} alt="Controller" className="w-full" />
+      </div>
+
+      {/* Main Content */}
+      <div className="z-20">
+        <h1 className="text-4xl md:text-[7rem] tracking-wide leading-none font-extrabold uppercase mt-12 md:mt-28 font-american">
+          Get Paid to Cheat
         </h1>
-
-        {/* Subtitle */}
-        <p className="text-yellow-400 font-medium py-2 px-4 rounded inline-block mt-4 text-sm sm:text-base md:text-lg">
-          Earn Money Quickly by Showcasing Cheats
+        <p className="text-lg md:text-2xl text-yellow-400 font-bold uppercase">
+          Earn money quickly by showcasing cheats
         </p>
+      </div>
 
-        {/* Robot Illustration */}
-        <div className="relative mt-16 flex justify-center items-center">
-          <motion.img
-            src={robotImage.src}
-            alt="Robot Image"
-            className="w-[200px] h-[200px] sm:w-[300px] sm:h-[300px] md:w-[400px] md:h-[400px]"
-          />
-          {/* Floating Icons */}
-          <motion.img
-            src={skullImage.src}
-            alt="Skull Icon"
-            className="absolute w-[80px] h-[80px] sm:w-[120px] sm:h-[120px] -top-5 left-5 sm:-top-10 sm:left-10 md:w-[140px] md:h-[140px] will-change-transform"
-            animate={{
-              translateY: [-20, 20],
-            }}
-            transition={{
-              duration: 3,
-              repeat: Infinity,
-              repeatType: "mirror",
-              ease: "easeInOut",
-            }}
-          />
-          <motion.img
-            src={litecoinImage.src}
-            alt="Litecoin Icon"
-            className="absolute w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] md:w-[150px] md:h-[150px] -top-10 right-10 sm:-top-20 sm:right-20 md:right-32 will-change-transform"
-            style={{
-              translateY,
-            }}
-          />
-          <motion.img
-            src={bitcoinImage.src}
-            alt="Bitcoin Icon"
-            className="absolute w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] md:w-[150px] md:h-[150px] top-5 left-5 sm:top-10 sm:left-10 will-change-transform"
-            animate={{
-              translateY: [-20, 20],
-            }}
-            transition={{
-              duration: 4,
-              repeat: Infinity,
-              repeatType: "mirror",
-              ease: "easeInOut",
-            }}
-          />
-        </div>
-
-        {/* CTA Button */}
-        <div className="button flex items-center justify-center">
-          <button className="mt-10 flex items-center justify-center gap-2 bg-yellow-400 text-black py-2 px-6 sm:py-3 sm:px-8 rounded-full text-sm sm:text-base md:text-lg font-bold hover:bg-yellow-500 transition-all">
-            Get Started Now
-            <ArrowDown className="w-4 h-4 sm:w-5 sm:h-5 bg-black rounded-full text-white" />
-          </button>
-        </div>
+      {/* Call to Action */}
+      <div className="flex justify-center mt-6 md:mt-10 z-20">
+        <button className="flex items-center justify-center gap-2 bg-[#FF5100] text-black py-2 px-4 sm:py-3 sm:px-6 md:py-3 md:px-8 rounded-full text-sm md:text-lg font-bold hover:bg-yellow-500 transition-all">
+          Get Started Now <FaArrowCircleDown />
+        </button>
       </div>
     </section>
   );
