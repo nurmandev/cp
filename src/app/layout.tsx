@@ -9,8 +9,8 @@ const dm = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "SaaS Website UI Kit",
-  description: "SaaS Website UI Kit",
+  title: "GETPAIDTOCHEAT",
+  description: "GETPAIDTOCHEAT",
 };
 
 export default function RootLayout({
