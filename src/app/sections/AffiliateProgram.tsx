@@ -8,7 +8,7 @@ import { ArrowDown } from "lucide-react";
 export default function AffiliateProgram() {
   return (
     <section
-      className="relative py-20 bg-gradient-to-b from-blue-900 to-black"
+      className="relative py-20 bg-gradient-to-b from-black-900 to-white"
       style={{
         backgroundImage: "url('/Vector.png')", // Replace with the correct path
       }}

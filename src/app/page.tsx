@@ -3,6 +3,7 @@ import LogoTicker from "./sections/LogoTicker";
 import Pricing from "./sections/Pricing";
 import ProductShowcase from "./sections/ProductShowcase";
 import AffiliateProgram from "./sections/AffiliateProgram";
+import Footer from "./sections/Footer";
 
 export default function Home() {
   return (
@@ -14,7 +15,7 @@ export default function Home() {
       <LogoTicker />
       <Pricing />
       <AffiliateProgram/>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

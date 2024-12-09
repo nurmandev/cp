@@ -1,67 +1,79 @@
-import Logo from "@/assets/logo.png";
+"use client";
 import Image from "next/image";
-import SocialX from "@/assets/icons/social-x.svg";
-import SocialInsta from "@/assets/icons/social-insta.svg";
-import SocialLinkedIn from "@/assets/icons/social-linkedin.svg";
-import SocialPin from "@/assets/icons/social-pin.svg";
-import SocialYouTube from "@/assets/icons/social-youtube.svg";
-import Link from "next/link";
-
-const links = [
-  {
-    name: "About",
-    href: "#",
-  },
-  {
-    name: "Features",
-    href: "#",
-  },
-  {
-    name: "Customers",
-    href: "#",
-  },
-  {
-    name: "Pricing",
-    href: "#",
-  },
-  {
-    name: "Help",
-    href: "#",
-  },
-  {
-    name: "Careers",
-    href: "#",
-  },
-];
+import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-[#bcbcbc] text-sm py-10 text-center">
-      <div className="container">
-        <div className="inline-flex relative before:content-[''] before:top-2 before:bottom-0 before:blur before:w-full before:bg-[linear-gradient(to_right,#f87bff,#fb92cf,#ffdd9b,#c2f0b1,#2fd8fe)] before:absolute">
-          <Image
-            src={Logo}
-            alt="SaaS Logo"
-            width={40}
-            height={40}
-            className="relative"
-          />
+    <footer className="bg-black text-white py-10">
+      <div className="container mx-auto px-6 lg:px-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        {/* Brand Section */}
+        <div>
+          <h2 className="text-2xl font-bold text-yellow-400 mb-4">
+            GETPAIDTOCHEAT
+          </h2>
+          <p className="text-sm">
+            Register Now and start Earning Now. Best Creator Platform Ever
+          </p>
+          <p className="mt-4 text-sm">@t.me/blahblah</p>
         </div>
-        <nav className="flex flex-col gap-6 mt-6 md:flex-row md:justify-center">
-          {links.map(({ href, name }) => (
-            <Link href={href} key={name}>
-              {name}
-            </Link>
-          ))}
-        </nav>
-        <div className="flex justify-center gap-6 mt-6">
-          <SocialX />
-          <SocialInsta />
-          <SocialLinkedIn />
-          <SocialPin />
-          <SocialYouTube />
+
+        {/* Navigation Section */}
+        <div>
+          <h3 className="text-lg font-bold text-yellow-400 mb-4">Navigate</h3>
+          <ul className="space-y-2">
+            <li>
+              <a href="/games" className="text-sm hover:underline">
+                Games
+              </a>
+            </li>
+            <li>
+              <a href="/pricing" className="text-sm hover:underline">
+                Pricing
+              </a>
+            </li>
+            <li>
+              <a href="/affiliate-program" className="text-sm hover:underline">
+                Affiliate Program
+              </a>
+            </li>
+          </ul>
         </div>
-        <p className="mt-6">&copy; {new Date().getFullYear()} Babakolo, Inc</p>
+
+        {/* Contact Section */}
+        <div>
+          <h3 className="text-lg font-bold text-yellow-400 mb-4">Contact us</h3>
+          <p className="text-sm mb-4">abc@getpaidtocheat.com</p>
+          <div className="flex space-x-4">
+            <a
+              href="#"
+              className="w-8 h-8 flex items-center justify-center bg-white text-black rounded-full"
+            >
+              <Facebook />
+            </a>
+            <a
+              href="#"
+              className="w-8 h-8 flex items-center justify-center bg-white text-black rounded-full"
+            >
+              <Instagram />
+            </a>
+            <a
+              href="#"
+              className="w-8 h-8 flex items-center justify-center bg-white text-black rounded-full"
+            >
+              <Twitter />
+            </a>
+            <a
+              href="#"
+              className="w-8 h-8 flex items-center justify-center bg-white text-black rounded-full"
+            >
+              <Linkedin />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-10 border-t border-gray-700 pt-4 text-center text-sm">
+        Copyright © 2024 Getpaidtocheat. All rights reserved.
       </div>
     </footer>
   );
