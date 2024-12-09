@@ -23,7 +23,7 @@ export default function HowItWorks() {
           {/* Timeline Vertical Line */}
           <div className="hidden md:block absolute top-0 left-10 h-full w-[2px] bg-red-500"></div>
 
-          <div className="flex flex-col space-y-10 md:space-y-0 md:grid md:grid-cols-[auto_1fr] md:gap-x-16">
+          <div className="flex flex-col space-y-12 md:space-y-0 md:grid md:grid-cols-[auto_1fr] md:gap-x-16">
             {/* Step 1 */}
             <Step
               number={1}
@@ -82,7 +82,7 @@ export default function HowItWorks() {
 // Step Component
 function Step({ number, title, description, icon, buttonText }: any) {
   return (
-    <div className="flex flex-col md:flex-row items-center md:items-start">
+    <div className="flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0">
       {/* Number and Line Connector */}
       <div className="flex flex-col items-center">
         <div className="w-10 h-10 flex items-center justify-center bg-red-500 text-white font-bold rounded-full">
@@ -99,7 +99,7 @@ function Step({ number, title, description, icon, buttonText }: any) {
         </div>
         <p className="mt-2 text-sm md:text-base">{description}</p>
         {buttonText && (
-          <button className="mt-4 px-6 py-2 bg-red-600 hover:bg-red-700 text-white text-sm font-bold rounded-full">
+          <button className="mt-4 px-6 py-2 bg-red-600 hover:bg-red-700 text-white text-sm font-bold rounded-full transition duration-200">
             {buttonText}
           </button>
         )}

@@ -8,9 +8,14 @@ import { ArrowDown } from "lucide-react";
 export default function AffiliateProgram() {
   return (
     <section
-      className="relative py-20 bg-gradient-to-b from-black-900 to-white"
+      className="relative py-20 bg-gradient-to-b from-black to-[#D9D9D9]"
       style={{
-        backgroundImage: "url('/Vector.png')", // Replace with the correct path
+        backgroundImage:
+          "url('/Vector.png')",
+        backgroundBlendMode: "overlay", // Blend the gradient and image
+        backgroundSize: "cover", // Ensure the image covers the section
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center", // Center the image
       }}
     >
       <div className="container mx-auto px-6 lg:px-20 flex flex-col lg:flex-row items-center gap-10">
