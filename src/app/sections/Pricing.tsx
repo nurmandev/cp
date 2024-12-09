@@ -9,7 +9,6 @@ const pricingTiers = [
     oldPrice: 999,
     description:
       "Get access to the cheat key for a lifetime for the specific game",
-    buttonText: "Get Now",
     features: [
       "Cheat Key Access for all the games",
       "Access to creator's Dashboard",
@@ -29,7 +28,7 @@ export default function Pricing() {
 
         <div className="max-w-md mx-auto bg-gray-900 rounded-lg shadow-lg p-8 relative">
           {pricingTiers.map(
-            ({ title, price, oldPrice, description, buttonText, features }) => (
+            ({ title, price, oldPrice, description, features }) => (
               <div key={title}>
                 <h3 className="text-orange-500 text-xl font-bold mb-2">
                   {title}
