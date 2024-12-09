@@ -5,6 +5,7 @@ import bitcoinImage from "@/assets/images/btc-image.png";
 import litecoinImage from "@/assets/images/litecoin-3d.png";
 import skullImage from "@/assets/images/litecoin-3d.png";
 import robotImage from "@/assets/images/hone_bg.png";
+import backgroundImage from "/public/bg.png";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
@@ -21,9 +22,17 @@ export default function Hero() {
   return (
     <section
       ref={sectionRef}
-      className="pt-10 pb-16 bg-black text-white overflow-x-hidden"
+      className="relative pt-10 pb-16 bg-gradient-to-b from-[#e46a31e3] to-black text-white overflow-x-hidden"
     >
-      <div className="container mx-auto px-4 text-center">
+      {/* Background Effect */}
+      <div
+        className="absolute top-0 left-0 w-full h-full bg-cover bg-no-repeat bg-center opacity-30 z-0"
+        style={{
+          backgroundImage: `url(${backgroundImage})`,
+        }}
+      />
+
+      <div className="container mx-auto px-4 text-center relative z-10">
         {/* Title */}
         <h1 className="tracking-tighter uppercase flex items-center justify-center font-american text-[48px] sm:text-[64px] md:text-[100px] lg:text-[140px] font-normal text-center leading-tight">
           GET PAID TO CHEAT
