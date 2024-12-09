@@ -8,7 +8,6 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-8 md:absolute p-4 text-white md:text-black md:left-1/2 md:-translate-x-1/2 mx-auto justify-center border border-[#252525] align-middle w-full md:w-[1000px] md:rounded-full z-50 md:my-10 font-space-grotesk shadow-md bg-white md:bg-transparent">
-      {/* fixed top-8 left-8 right-8 z-50 border border-[#252525] rounded-full flex items-center justify-between px-6 py-4 bg-[#151515] text-white */}
       <div className="flex items-center justify-between">
         {/* Logo */}
         <h1 className="text-xl font-bold md:text-white text-black">GETPAIDTOCHEAT</h1>

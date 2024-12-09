@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import CheckIcon from "@/assets/icons/check.svg";
+// import CheckIcon from "@/assets/icons/check.svg";
 import giftImage from "@/assets/icons/gift.png";
 import secondGiftImage from "@/assets/icons/second-gift.png";
 import { ArrowDown } from "lucide-react";
@@ -31,7 +31,7 @@ export default function AffiliateProgram() {
               "Free EARNTOCHEAT for you.",
             ].map((benefit, index) => (
               <li key={index} className="flex items-center text-lg">
-                <CheckIcon className="w-6 h-6 text-black mr-3 sm:w-5 sm:h-5 bg-green-500 rounded-full text-white" />
+                {/* <CheckIcon className="w-6 h-6 text-black mr-3 sm:w-5 sm:h-5 bg-green-500 rounded-full text-white" /> */}
                 {benefit}
               </li>
             ))}
