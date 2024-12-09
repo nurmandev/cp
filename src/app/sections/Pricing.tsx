@@ -1,7 +1,5 @@
 "use client";
 import CheckIcon from "@/assets/icons/check.svg";
-import { motion } from "motion/react";
-import clsx from "clsx";
 import { ArrowDown } from "lucide-react";
 
 const pricingTiers = [

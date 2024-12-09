@@ -3,7 +3,6 @@ import Image from "next/image";
 import CheckIcon from "@/assets/icons/check.svg";
 import giftImage from "@/assets/icons/gift.png";
 import secondGiftImage from "@/assets/icons/second-gift.png";
-import backgroundImage from "@/assets/icons/Vector.png";
 import { ArrowDown } from "lucide-react";
 
 export default function AffiliateProgram() {
