@@ -4,6 +4,7 @@ import bitcoinImage from "@/assets/images/btc-image.png";
 import litecoinImage from "@/assets/images/litecoin-3d.png";
 import skullImage from "@/assets/images/litecoin-3d.png";
 import robotImage from "@/assets/images/hone_bg.png";
+import gameImage from "@/assets/icons/Joystick.png";
 import backgroundImage from "/public/bg.png";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
@@ -45,6 +46,9 @@ export default function Hero() {
       </div>
       <div className="absolute top-3/4 right-1/4 w-16 md:w-32">
         <img src={litecoinImage.src} alt="Litecoin" className="w-full" />
+      </div>
+      <div className="absolute top-2/4 right-1/4 w-16 md:w-52">
+        <img src={gameImage.src} alt="Litecoin" className="w-full" />
       </div>
       <div className="absolute top-1/3 left-[10%] w-16 md:w-32">
         <img src={litecoinImage.src} alt="Litecoin" className="w-full" />

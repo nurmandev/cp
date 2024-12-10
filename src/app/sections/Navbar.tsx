@@ -7,10 +7,15 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed md:absolute p-4 text-white md:text-black md:left-1/2 md:-translate-x-1/2 mx-auto justify-center border border-[#252525] align-middle w-full md:w-[1000px] md:rounded-full z-50 md:my-10 font-space-grotesk shadow-md bg-white md:bg-transparent">
+    <nav
+      className="md:absolute p-4 text-white md:text-black md:left-1/2 md:-translate-x-1/2 mx-auto justify-center 
+    border border-[#252525] align-middle w-full md:w-[1000px] md:rounded-full z-50 md:my-10 font-space-grotesk shadow-md bg-white md:bg-[#3C3C3C]"
+    >
       <div className="flex items-center justify-between">
         {/* Logo */}
-        <h1 className="text-xl font-bold md:text-white text-black">GETPAIDTOCHEAT</h1>
+        <h1 className="text-xl font-bold md:text-white text-black">
+          GETPAIDTOCHEAT
+        </h1>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex items-center space-x-6 text-white">

@@ -25,7 +25,7 @@ function Section({
           : "md:justify-self-start -ml-[5.6rem]"
       }`}
     >
-      <div className="flex-shrink-0 bg-yellow-400 w-10 h-10 flex items-center justify-center rounded-full text-black font-bold">
+      <div className="flex-shrink-0 bg-[#FF5100] w-10 h-10 flex items-center justify-center rounded-full text-black font-bold">
         {id}
       </div>
       <div>
@@ -40,7 +40,7 @@ function Section({
             <Image
               src={icon}
               alt={`${title} icon`}
-              className="w-10"
+              className="w-16"
               width={40}
               height={40}
             />
@@ -51,7 +51,7 @@ function Section({
           {description}
         </p>
         {buttonText && (
-          <button className="px-4 py-1 font-medium bg-yellow-400 text-black rounded-full hover:bg-yellow-500 mt-8">
+          <button className="px-4 py-1 font-medium bg-[#FF5100] text-black rounded-full hover:bg-yellow-500 mt-8">
             {buttonText}
           </button>
         )}

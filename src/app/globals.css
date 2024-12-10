@@ -27,7 +27,7 @@ body {
   }
 
   .logo-ticker-image {
-    @apply h-8 w-auto;
+    @apply h-10 w-auto;
   }
 
   .tag {
