@@ -1,6 +1,7 @@
 "use client";
 
 import bitcoinImage from "@/assets/images/btc-image.png";
+import btcoinImage from "@/assets/icons/btc-coin.png";
 import litecoinImage from "@/assets/images/litecoin-3d.png";
 import skullImage from "@/assets/images/litecoin-3d.png";
 import robotImage from "@/assets/images/hone_bg.png";
@@ -23,7 +24,7 @@ export default function Hero() {
   return (
     <section
       ref={sectionRef}
-      className="relative flex flex-col justify-between bg-black text-white text-center p-8 min-h-screen overflow-hidden"
+      className="relative flex flex-col justify-between bg-black text-white text-center p-4 pb-10 min-h-screen overflow-hidden"
     >
       {/* Background Image */}
       <motion.div
@@ -33,10 +34,9 @@ export default function Hero() {
         <img
           src={backgroundImage.src}
           alt="Background"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-center"
         />
-      </motion.div>
-
+      </motion.div>{" "}
       {/* Animated Assets */}
       <div className="absolute bottom-24 left-1/2 transform -translate-x-1/2 w-[50%] md:w-[33%]">
         <img src={robotImage.src} alt="Robot Mascot" className="w-full" />
@@ -54,25 +54,23 @@ export default function Hero() {
         <img src={litecoinImage.src} alt="Litecoin" className="w-full" />
       </div>
       <div className="absolute top-[60%] left-[5%] w-20 md:w-40 -rotate-12">
-        <img src={bitcoinImage.src} alt="Bitcoin" className="w-full" />
+        <img src={btcoinImage.src} alt="Bitcoin" className="w-full" />
       </div>
       <div className="absolute bottom-0 right-8 w-4 md:w-6">
         <img src={skullImage.src} alt="Controller" className="w-full" />
       </div>
-
       {/* Main Content */}
       <div className="z-20">
-        <h1 className="text-4xl md:text-[7rem] tracking-wide leading-none font-extrabold uppercase mt-12 md:mt-28 font-american">
+        <h1 className="text-4xl sm:text-5xl md:text-[7rem] tracking-wide leading-none font-extrabold uppercase mt-12 sm:mt-16 md:mt-28 font-american">
           Get Paid to Cheat
         </h1>
 
-        <p className="text-lg md:text-2xl text-yellow-400 font-bold uppercase">
+        <p className="text-lg sm:text-xl md:text-2xl text-yellow-400 font-bold uppercase">
           Earn money quickly by showcasing cheats
         </p>
       </div>
-
       {/* Call to Action */}
-      <div className="flex justify-center mt-6 md:mt-10 z-20">
+      <div className="flex justify-center mt-6 sm:mt-8 md:mt-10 z-20">
         <button className="flex items-center justify-center gap-2 bg-[#FF5100] text-black py-2 px-4 sm:py-3 sm:px-6 md:py-3 md:px-8 rounded-full text-sm md:text-lg font-bold hover:bg-yellow-500 transition-all">
           Get Started Now <FaArrowCircleDown />
         </button>

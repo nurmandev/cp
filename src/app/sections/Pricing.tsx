@@ -34,7 +34,7 @@ export default function Pricing() {
           <span className="text-yellow-400">.</span>
         </h2>
 
-        <div className="max-w-lg mx-auto bg-[#0f0f0f] rounded-lg shadow-lg p-6 md:p-8 relative border border-yellow-400">
+        <div className="max-w-lg mx-auto bg-[#0f0f0f] rounded p-6 md:p-8 relative border border-yellow-400 shadow-xl shadow-yellow-400/50 hover:shadow-2xl hover:shadow-yellow-400/70 transition-all">
           {pricingTiers.map(
             ({ title, price, oldPrice, description, features }) => (
               <div key={title}>

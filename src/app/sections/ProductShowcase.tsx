@@ -25,13 +25,6 @@ export default function ProductShowcase() {
       <div className="text-4xl md:text-8xl font-american text-center md:text-left">
         Available Games.
       </div>
-      <Image
-        src="/assets/icons/valorant.png"
-        alt="Gift 1"
-        className="rounded w-full h-auto"
-        width={50}
-        height={30}
-      />
       <div className="text-base md:text-xl mb-6 md:mb-12 opacity-70 text-center md:text-left">
         Available MODS and cheats for the following games
       </div>

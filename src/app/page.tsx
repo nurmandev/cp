@@ -6,7 +6,7 @@ import AffiliateProgram from "./sections/AffiliateProgram";
 import Footer from "./sections/Footer";
 import Navbar from "./sections/Navbar";
 import HowItWorks from "./sections/howItWorks/index";
-// import HowItWorks from "./sections/HowItWorks";
+import LogoTickers from "./sections/LogoTickers";
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
       <Hero />
       <LogoTicker />
       <ProductShowcase />
-      <LogoTicker />
+      <LogoTickers />
       <HowItWorks />
       <Pricing />
       <AffiliateProgram />
