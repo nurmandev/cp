@@ -9,7 +9,7 @@ export default function Navbar() {
   return (
     <nav
       className="md:absolute p-4 text-white md:text-black md:left-1/2 md:-translate-x-1/2 mx-auto justify-center md:bg-[#151515]
-    border border-[#252525] align-middle w-full md:w-[1500px] md:rounded-full z-50 md:my-10 font-space-grotesk shadow-md bg-white"
+    border border-[#3C3C3C] align-middle w-full md:w-[1400px] md:rounded-full z-50 md:my-10 font-space-grotesk shadow-md bg-white"
     >
       <div className="flex items-center justify-between">
         {/* Logo */}
@@ -18,7 +18,7 @@ export default function Navbar() {
         </h1>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex items-center space-x-6 text-white">
+        <ul className="hidden md:flex  items-center space-x-6 text-white">
           <li className="hover:text-orange-500 cursor-pointer">Games</li>
           <li className="hover:text-gray-500 cursor-pointer">How it works?</li>
           <li className="hover:text-gray-500 cursor-pointer">Pricing</li>
