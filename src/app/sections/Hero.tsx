@@ -61,6 +61,7 @@ export default function Hero() {
         <h1 className="text-4xl md:text-[7rem] tracking-wide leading-none font-extrabold uppercase mt-12 md:mt-28 font-american">
           Get Paid to Cheat
         </h1>
+
         <p className="text-lg md:text-2xl text-yellow-400 font-bold uppercase">
           Earn money quickly by showcasing cheats
         </p>
