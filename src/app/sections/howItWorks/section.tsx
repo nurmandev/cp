@@ -1,8 +1,10 @@
+import Image from "next/image";
+
 interface Props {
   id: number;
   title: string;
   description: string;
-  icon?: string;
+  icon?: string; // Path to the icon image
   buttonText?: string;
   reverse?: boolean;
 }
@@ -26,14 +28,24 @@ function Section({
       <div className="flex-shrink-0 bg-yellow-400 w-10 h-10 flex items-center justify-center rounded-full text-black font-bold">
         {id}
       </div>
-      <div className="">
+      <div>
         <div
           className={`flex items-center gap-4 mb-4 ${
             reverse ? "flex-row-reverse" : "justify-start"
-          } `}
+          }`}
         >
-          <img src={icon} className="w-10" />
-          <h3 className="text-2xl font-medium ">{title}</h3>
+          {icon && (
+            <div className="w-10 h-10 relative">
+              <Image
+                src={icon}
+                alt={`${title} icon`}
+                layout="fill"
+                objectFit="contain"
+                className="rounded"
+              />
+            </div>
+          )}
+          <h3 className="text-2xl font-medium">{title}</h3>
         </div>
         <p className={`text-gray-400 ${reverse ? "text-right" : "text-left"}`}>
           {description}

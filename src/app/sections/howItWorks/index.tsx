@@ -4,6 +4,11 @@ import Image from "next/image";
 import Section from "./section";
 import works1 from "@/assets/icons/how1.png";
 import works2 from "@/assets/icons/how2.png";
+import discordIcon from "@/assets/icons/discord.png";
+import guideIcon from "@/assets/icons/guide.png";
+import toolsIcon from "@/assets/icons/tools.png";
+import connectIcon from "@/assets/icons/subscription.png";
+import subscriptionIcon from "@/assets/icons/subscription.png";
 
 const HowItWorks: React.FC = () => {
   return (
@@ -25,21 +30,21 @@ const HowItWorks: React.FC = () => {
           id={1}
           title="Registration Via Discord"
           description="Register on our platform using Discord's custodial login for all authentication-related stuff."
-          icon="discord"
+          icon={discordIcon}
           reverse
         />
         <Section
           id={2}
           title="Onboarding Guide"
           description="Follow our detailed onboarding guide to set up your profile and access the tools."
-          icon="guide"
+          icon={guideIcon}
           reverse
         />
         <Section
           id={3}
           title="Start Utilizing Tools"
           description="Unlock access to premium features and kickstart your journey with our tools."
-          icon="tools"
+          icon={toolsIcon}
           reverse
         />
       </div>
@@ -52,16 +57,16 @@ const HowItWorks: React.FC = () => {
       {/* Right Section */}
       <div className="flex-1 flex flex-col gap-12 p-4 md:px-8">
         <Section
-          id={1}
+          id={4}
           title="Connect Accounts"
           description="Link Social Media Accounts and Payment methods to kickstart the process of onboarding."
-          icon="connect"
+          icon={connectIcon}
         />
         <Section
-          id={2}
+          id={5}
           title="Subscription Fee"
           description="Pay a Monthly $4.99 fee for cheat key access to unlock premium features."
-          icon="subscription"
+          icon={subscriptionIcon}
         />
         <div className="mb-12">
           <Image

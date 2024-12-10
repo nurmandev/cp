@@ -20,7 +20,13 @@ const pricingTiers = [
 
 export default function Pricing() {
   return (
-    <section className="py-12 md:py-24 bg-black text-white relative">
+    <section className="py-12 md:py-24 bg-black text-white relative"
+    style={{
+      backgroundImage: "url('/Pattern.png')", // Ensure the path is correct
+      backgroundSize: "cover",
+      backgroundRepeat: "no-repeat",
+    }}
+  >
       <div className="container mx-auto px-6 lg:px-20">
         <h2 className="text-center font-bold uppercase tracking-wider mb-8 md:mb-12 text-4xl md:text-6xl font-american">
           Pricing
