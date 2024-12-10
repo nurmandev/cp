@@ -8,8 +8,8 @@ export default function Navbar() {
 
   return (
     <nav
-      className="md:absolute p-4 text-white md:text-black md:left-1/2 md:-translate-x-1/2 mx-auto justify-center 
-    border border-[#252525] align-middle w-full md:w-[1000px] md:rounded-full z-50 md:my-10 font-space-grotesk shadow-md bg-white md:bg-[#3C3C3C]"
+      className="md:absolute p-4 text-white md:text-black md:left-1/2 md:-translate-x-1/2 mx-auto justify-center md:bg-[#151515]
+    border border-[#252525] align-middle w-full md:w-[1500px] md:rounded-full z-50 md:my-10 font-space-grotesk shadow-md bg-white"
     >
       <div className="flex items-center justify-between">
         {/* Logo */}
