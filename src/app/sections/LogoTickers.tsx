@@ -1,76 +1,65 @@
 "use client";
-import acmeLogo from "@/assets/icons/fortnite-logo.png";
-import apexLogo from "@/assets/icons/VALORANT-logo.png";
-import celestialLogo from "@/assets/icons/Counter-Strike.png";
-import echoLogo from "@/assets/icons/rust-logo 1.png";
-import pulseLogo from "@/assets/icons/SPOOFER.png";
-import quantumLogo from "@/assets/icons/X.png";
+import fortuneLogo from "@/assets/icons/fortnite-logo2.png";
+import valorantLogo from "@/assets/icons/VALORANT-logo.png";
+import xLogo from "@/assets/icons/X.png";
+import contralLogo from "@/assets/icons/contral.png";
+import rustLogo from "@/assets/icons/rust.png";
+import quantumLogo from "@/assets/icons/paypal.png";
 import Image from "next/image";
-import { motion } from "motion/react";
 
 const logos = [
   {
     name: "Acme logo",
-    image: acmeLogo,
+    image: fortuneLogo,
   },
   {
     name: "Apex logo",
-    image: apexLogo,
+    image: xLogo,
   },
   {
-    name: "Celestial logo",
-    image: celestialLogo,
+    name: "valorant Logo",
+    image: valorantLogo,
   },
   {
-    name: "Echo logo",
-    image: echoLogo,
+    name: "X logo",
+    image: xLogo,
   },
   {
-    name: "Pulse logo",
-    image: pulseLogo,
+    name: "contral Logo",
+    image: contralLogo,
+  },
+  {
+    name: "x logo",
+    image: xLogo,
+  },
+  {
+    name: "rust Logo",
+    image: rustLogo,
   },
   {
     name: "Quantum logo",
-    image: quantumLogo,
+    image: xLogo,
   },
 ];
 
 export default function LogoTickers() {
   return (
-    <div className="py-8 mb:py-12 bg-black">
-      <div className="container">
-        <div className="flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black,transparent)]">
-          <motion.div
-            className="flex gap-14 flex-none pr-14"
-            animate={{
-              translateX: "-50%",
-            }}
-            transition={{
-              duration: 20,
-              ease: "linear",
-              repeat: Infinity,
-              repeatType: "loop",
-            }}
-          >
+    <section className="bg-black text-white w-full">
+      <div className="py-8">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-6 justify-items-center">
             {logos.map((logo) => (
-              <Image
-                key={logo.name}
-                src={logo.image}
-                alt={logo.name}
-                className="logo-ticker-image"
-              />
+              <div key={logo.name} className="flex items-center justify-center">
+                <Image
+                  src={logo.image}
+                  alt={logo.name}
+                  className="w-auto h-20 object-contain"
+                />
+              </div>
             ))}
-            {logos.map((logo) => (
-              <Image
-                key={logo.name}
-                src={logo.image}
-                alt={logo.name}
-                className="logo-ticker-image"
-              />
-            ))}
-          </motion.div>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

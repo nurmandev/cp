@@ -50,7 +50,7 @@ export default function Hero() {
       </div>
       {/* Call to Action */}
       <div className="flex justify-center  sm:mt-8 z-20">
-        <button className="flex items-center justify-center gap-2 bg-[#FF5100] text-black py-2 px-4 sm:py-3 sm:px-6 md:py-3 md:px-8 rounded-full text-sm md:text-lg font-bold hover:bg-yellow-500 transition-all">
+        <button className="flex items-center justify-center gap-2 bg-[#FF5100] text-black py-2 px-4 sm:py-3 sm:px-6 md:py-3 md:px-4 rounded-full text-sm md:text-lg font-bold hover:bg-yellow-500 transition-all">
           Get Started Now <FaArrowCircleDown />
         </button>
       </div>

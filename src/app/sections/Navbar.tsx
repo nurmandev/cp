@@ -1,90 +1,100 @@
 "use client";
 
 import { useState } from "react";
-import { FaArrowRight } from "react-icons/fa";
+import { FaArrowCircleRight } from "react-icons/fa";
+import arrowImage from "@/assets/icons/top-arrow.png";
+import Link from "next/link";
+import { FiMenu, FiX } from "react-icons/fi"; // Mobile Menu Icons
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav
-      className="md:absolute p-4 text-white md:text-black md:left-1/2 md:-translate-x-1/2 mx-auto justify-center md:bg-[#151515]
-    border border-[#3C3C3C] align-middle w-full md:w-[1400px] md:rounded-full z-50 md:my-10 font-space-grotesk shadow-md bg-white"
-    >
-      <div className="flex items-center justify-between">
-        {/* Logo */}
-        <h1 className="text-xl font-bold md:text-white text-black">
-          GETPAIDTOCHEAT
-        </h1>
-
-        {/* Desktop Menu */}
-        <ul className="hidden md:flex  items-center space-x-6 text-white">
-          <li className="hover:text-orange-500 cursor-pointer">Games</li>
-          <li className="hover:text-gray-500 cursor-pointer">How it works?</li>
-          <li className="hover:text-gray-500 cursor-pointer">Pricing</li>
-          <li className="hover:text-gray-500 cursor-pointer">Affiliates</li>
-          <li className="hover:text-gray-500 cursor-pointer">Contact</li>
-        </ul>
-
-        {/* Desktop Buttons */}
-        <div className="hidden md:flex items-center space-x-4">
-          <button className="bg-gray-800 px-4 py-2 rounded-full text-white hover:bg-gray-700">
+    <nav className="relative z-50 w-full">
+      {/* Desktop Navbar */}
+      <header className="fixed top-8 left-8 right-8 z-50 border border-[#252525] rounded-full flex items-center justify-between px-6 py-4 bg-[#151515] text-white">
+        <div className="flex items-center gap-16">
+          <div className="text-lg font-bold">GETPAIDTOCHEAT</div>
+          <nav className="hidden md:flex space-x-12">
+            <Link href="#games" className="hover:text-yellow-400">
+              Games
+            </Link>
+            <Link href="#how-it-works" className="hover:text-yellow-400">
+              How it works?
+            </Link>
+            <Link href="#pricing" className="hover:text-yellow-400">
+              Pricing
+            </Link>
+            <Link href="#affiliates" className="hover:text-yellow-400">
+              Affiliates
+            </Link>
+            <Link href="#contact" className="hover:text-yellow-400">
+              Contact
+            </Link>
+          </nav>
+        </div>
+        <div className="flex space-x-4 font-medium">
+          <button className="px-6 py-1 bg-[#202020] text-white rounded-full hover:bg-[#303030]">
             Login
           </button>
-          <button className="bg-[#FF5100] px-4 py-2 rounded-full flex items-center text-black font-bold hover:bg-orange-600 ">
-            Get Cheat <FaArrowRight className="ml-2" />
+          <button className="flex items-center gap-3 px-4 py-1 bg-yellow-400 text-black rounded-full hover:bg-yellow-500">
+            Get Cheat
+            <ArrowRight className="w-5 h-5" />
           </button>
         </div>
+      </header>
 
-        {/* Mobile Menu Toggle */}
-        <button
-          className="md:hidden flex flex-col items-center justify-center gap-1"
-          onClick={() => setIsOpen((prev) => !prev)}
-        >
-          <span
-            className={`block w-6 h-1 rounded bg-black transition-transform ${
-              isOpen ? "rotate-45 translate-y-2" : ""
-            }`}
-          ></span>
-          <span
-            className={`block w-6 h-1 rounded bg-black transition-opacity ${
-              isOpen ? "opacity-0" : "opacity-100"
-            }`}
-          ></span>
-          <span
-            className={`block w-6 h-1 rounded bg-black transition-transform ${
-              isOpen ? "-rotate-45 -translate-y-2" : ""
-            }`}
-          ></span>
-        </button>
-      </div>
+      {/* Mobile Menu Toggle Button */}
+      <button
+        className="md:hidden absolute top-8 right-8 z-50 text-white"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+      </button>
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="mt-4 space-y-4 md:hidden">
-          <ul className="flex flex-col space-y-2">
-            <li className="hover:text-orange-500 cursor-pointer text-black">
-              Games
-            </li>
-            <li className="hover:text-gray-500 cursor-pointer text-black">
-              How it works?
-            </li>
-            <li className="hover:text-gray-500 cursor-pointer text-black">
-              Pricing
-            </li>
-            <li className="hover:text-gray-500 cursor-pointer text-black">
-              Affiliates
-            </li>
-            <li className="hover:text-gray-500 cursor-pointer text-black">
-              Contact
-            </li>
-          </ul>
-          <div className="flex flex-col space-y-2">
-            <button className="bg-gray-800 px-4 py-2 rounded-full text-white hover:bg-gray-700">
+        <div className="fixed top-0 left-0 right-0 bottom-0 bg-[#151515] z-40 md:hidden flex flex-col items-center py-12">
+          <Link
+            href="#games"
+            className="text-white hover:text-yellow-400 py-2 text-lg"
+          >
+            Games
+          </Link>
+          <Link
+            href="#how-it-works"
+            className="text-white hover:text-yellow-400 py-2 text-lg"
+          >
+            How it works?
+          </Link>
+          <Link
+            href="#pricing"
+            className="text-white hover:text-yellow-400 py-2 text-lg"
+          >
+            Pricing
+          </Link>
+          <Link
+            href="#affiliates"
+            className="text-white hover:text-yellow-400 py-2 text-lg"
+          >
+            Affiliates
+          </Link>
+          <Link
+            href="#contact"
+            className="text-white hover:text-yellow-400 py-2 text-lg"
+          >
+            Contact
+          </Link>
+
+          {/* Mobile Action Buttons */}
+          <div className="flex flex-col items-center space-y-4 mt-6">
+            <button className="px-6 py-2 bg-[#202020] text-white rounded-full hover:bg-[#303030]">
               Login
             </button>
-            <button className="bg-orange-500 px-4 py-2 rounded-full flex items-center justify-center text-black font-bold hover:bg-orange-600">
-              Get Cheat <FaArrowRight className="ml-2" />
+            <button className="flex items-center gap-3 px-4 py-2 bg-yellow-400 text-black rounded-full hover:bg-yellow-500">
+              Get Cheat
+              <ArrowRight className="ml-2 w-5 h-5" />
             </button>
           </div>
         </div>
