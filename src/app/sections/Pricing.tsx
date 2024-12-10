@@ -1,6 +1,6 @@
 "use client";
-import CheckIcon from "@/assets/icons/check.svg";
-import { ArrowDown } from "lucide-react";
+import { FaArrowCircleRight } from "react-icons/fa";
+import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 
 const pricingTiers = [
   {
@@ -20,43 +20,54 @@ const pricingTiers = [
 
 export default function Pricing() {
   return (
-    <section className="py-24 bg-black text-white relative">
+    <section className="py-12 md:py-24 bg-black text-white relative">
       <div className="container mx-auto px-6 lg:px-20">
-        <h2 className="text-center text-5xl font-bold uppercase tracking-wider mb-12">
-          Pricing<span className="text-orange-500">.</span>
+        <h2 className="text-center font-bold uppercase tracking-wider mb-8 md:mb-12 text-4xl md:text-6xl font-american">
+          Pricing
+          <span className="text-yellow-400">.</span>
         </h2>
 
-        <div className="max-w-md mx-auto bg-gray-900 rounded-lg shadow-lg p-8 relative">
+        <div className="max-w-lg mx-auto bg-[#0f0f0f] rounded-lg shadow-lg p-6 md:p-8 relative border border-yellow-400">
           {pricingTiers.map(
             ({ title, price, oldPrice, description, features }) => (
               <div key={title}>
-                <h3 className="text-orange-500 text-xl font-bold mb-2">
+                <h3 className="text-yellow-400 text-3xl md:text-4xl text-center font-bold mb-4">
                   {title}
                 </h3>
-                <p className="text-gray-400 mb-6">{description}</p>
+                <p className="text-gray-400 mb-6 text-sm md:text-base">
+                  {description}
+                </p>
 
                 {/* Pricing Section */}
-                <div className="flex items-center gap-4 mb-6">
-                  <span className="text-gray-600 line-through text-lg">
+                <div className="flex items-center justify-center gap-4 mb-6">
+                  <span className="text-gray-600 line-through text-2xl md:text-4xl font-bold">
                     ${oldPrice}
                   </span>
-                  <span className="text-4xl font-bold">${price}</span>
+                  <span className="text-3xl md:text-4xl font-bold">
+                    ${price}
+                  </span>
                 </div>
+
+                <div className="text-gray-600 h-1 w-full" />
 
                 {/* Features List */}
                 <ul className="space-y-3 mb-6">
                   {features.map((feature, index) => (
-                    <li key={index} className="flex items-center text-gray-300">
-                      <CheckIcon className="w-5 h-5 text-green-500 mr-3" />
+                    <li
+                      key={index}
+                      className="flex items-center text-gray-300 text-sm md:text-base"
+                    >
+                      <IoMdCheckmarkCircleOutline className="w-5 h-5 text-green-500 mr-3" />
                       {feature}
                     </li>
                   ))}
                 </ul>
 
-                <div className="button flex items-center justify-center">
-                  <button className="mt-10 flex items-center justify-center gap-2 bg-yellow-400 text-black py-2 px-6 sm:py-3 sm:px-8 rounded-full text-sm sm:text-base md:text-lg font-bold hover:bg-yellow-500 transition-all">
-                    Get Started Now
-                    <ArrowDown className="w-4 h-4 sm:w-5 sm:h-5 bg-black rounded-full text-white" />
+                {/* Button */}
+                <div className="flex items-center justify-center">
+                  <button className="mt-6 md:mt-10 flex items-center justify-center gap-2 bg-yellow-400 text-black py-2 px-6 sm:py-3 sm:px-8 rounded-full text-sm sm:text-base md:text-lg font-medium hover:bg-yellow-500 transition-all">
+                    Get Now
+                    <FaArrowCircleRight className="w-4 h-4" />
                   </button>
                 </div>
               </div>
