@@ -1,63 +1,43 @@
-import Image from "next/image";
+"use client";
 
-interface Props {
+import Image, { StaticImageData } from "next/image";
+
+interface SectionProps {
   id: number;
   title: string;
   description: string;
-  icon?: string; // Path to the icon image
-  buttonText?: string;
+  icon: StaticImageData; // Update to accept StaticImageData
   reverse?: boolean;
 }
 
-function Section({
+const Section: React.FC<SectionProps> = ({
   id,
   title,
   description,
   icon,
-  buttonText,
-  reverse = false,
-}: Props) {
+  reverse,
+}) => {
   return (
     <div
-      className={`relative flex items-start gap-12 mb-10 ${
-        reverse
-          ? "md:justify-self-end flex-row-reverse -mr-[5.6rem]"
-          : "md:justify-self-start -ml-[5.6rem]"
-      }`}
+      className={`flex flex-col md:flex-row items-center ${
+        reverse ? "md:flex-row-reverse" : ""
+      } gap-4 md:gap-8`}
     >
-      <div className="flex-shrink-0 bg-yellow-400 w-10 h-10 flex items-center justify-center rounded-full text-black font-bold">
-        {id}
+      <div className="flex-shrink-0">
+        <Image
+          src={icon}
+          alt={`${title} icon`}
+          width={50}
+          height={50}
+          className="rounded"
+        />
       </div>
       <div>
-        <div
-          className={`flex items-center gap-4 mb-4 ${
-            reverse ? "flex-row-reverse" : "justify-start"
-          }`}
-        >
-          {icon && (
-            <div className="w-10 h-10 relative">
-              <Image
-                src={icon}
-                alt={`${title} icon`}
-                layout="fill"
-                objectFit="contain"
-                className="rounded"
-              />
-            </div>
-          )}
-          <h3 className="text-2xl font-medium">{title}</h3>
-        </div>
-        <p className={`text-gray-400 ${reverse ? "text-right" : "text-left"}`}>
-          {description}
-        </p>
-        {buttonText && (
-          <button className="px-4 py-1 font-medium bg-yellow-400 text-black rounded-full hover:bg-yellow-500 mt-8">
-            {buttonText}
-          </button>
-        )}
+        <h3 className="text-xl md:text-2xl font-semibold mb-2">{title}</h3>
+        <p className="text-gray-300">{description}</p>
       </div>
     </div>
   );
-}
+};
 
 export default Section;
